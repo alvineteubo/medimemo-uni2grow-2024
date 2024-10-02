@@ -19,36 +19,31 @@ export function AppNavigation() {
   }, [location.pathname]);
 
   return (
-      <div className="menuBot">
-        {dataItem.map((item: ItemNavigation) => (
+    <div className="menuBot">
+      {dataItem.map((item: ItemNavigation) => {
+        const isActive = activepage.startsWith(item.path);
+        return (
           <div
             key={item.path}
             className="menuBottomItem"
             onClick={() => setActivePage(item.path)}
           >
-            <div
-              className={
-                activepage === item.path ? "iconClickMiddle" : "iconClick"
-              }
-            >
+            <div className={isActive ? "iconClickMiddle" : "iconClick"}>
               <IconButton component={Link} href={item.path}>
                 <img
-                  src={activepage === item.path ? item.activeIcon : item.icon}
+                  src={isActive ? item.activeIcon : item.icon}
                   alt="Home Health"
                 />
               </IconButton>
             </div>
             <Typography
-              className={
-                activepage === item.path
-                  ? "menuBotIconName-over"
-                  : "menuBotIconName"
-              }
+              className={isActive ? "menuBotIconName-over" : "menuBotIconName"}
             >
               {item.name}
             </Typography>
           </div>
-        ))}
-      </div>
+        );
+      })}
+    </div>
   );
 }
