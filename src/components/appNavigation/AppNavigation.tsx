@@ -8,9 +8,6 @@ import { ItemNavigation, dataItem } from "../../utils/navigationData";
 export function AppNavigation() {
   const location = useLocation();
 
-  if (location.pathname === "/login") {
-    return null;
-  }
 
   const [activepage, setActivePage] = useState<string>(location.pathname);
 

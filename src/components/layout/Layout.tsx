@@ -6,7 +6,7 @@ import { AppNavigation } from "../appNavigation/AppNavigation";
 export function Layout() {
   const location = useLocation();
 
-  const noAppNavigations = ["/medications/details", "/profil"];
+  const noAppNavigations = ["/medications/details", "/profil", "/login"];
   const showAppNavigation = !noAppNavigations.includes(location.pathname);
   return (
     <div className="container">
