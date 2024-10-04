@@ -6,6 +6,7 @@ import addIcon from "../../assets/images/therapie/add_circle.png";
 import SearchIcon from "../../assets/images/therapie/Icon.png";
 import forwardIcon from "../../assets/images/therapie/arrow_forward_ios.png";
 import { Therapie } from "../../models/Therapie";
+import { useNavigate } from "react-router-dom";
 
 export function Therapies() {
   const [therapies, setTherapies] = useState<Therapie[]>([]);
@@ -37,6 +38,11 @@ export function Therapies() {
     return error === "";
   }
 
+  const navigate = useNavigate();
+
+  const handleclick = () => {
+    navigate("addEditTherapie");
+  };
   return (
     <>
       <Typography className="title" style={{ fontWeight: 700, fontSize: 20 }}>
@@ -112,7 +118,9 @@ export function Therapies() {
       </div>
 
       <div className="addContainer">
-        <img src={addIcon} alt="add icon" />
+        <IconButton onClick={handleclick}>
+          <img src={addIcon} alt="add icon" />
+        </IconButton>
       </div>
     </>
   );
