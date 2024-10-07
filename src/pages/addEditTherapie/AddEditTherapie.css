@@ -24,6 +24,7 @@
   align-self: stretch;
   border-radius: var(--Radius-sm, 8px);
   background: var(--Colours-White, #fff);
+  /* background-color: #f00; */
 }
 .typo1 {
   color: #000;
@@ -130,3 +131,7 @@
   padding: 14px;
   align-self: stretch;
 }
+/* .selectButton .notes {
+  height: 84px;
+  border: 2px solid red;
+} */

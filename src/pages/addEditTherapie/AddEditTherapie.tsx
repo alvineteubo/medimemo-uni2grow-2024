@@ -131,6 +131,50 @@ export function AddEditTherapie() {
             </div>
           </div>
         </div>
+
+        <div className="panel21">
+          <Typography
+            className="typo1"
+            fontFamily="open sans"
+            fontSize={14}
+            fontWeight={700}
+            fontStyle="normal"
+          >
+            Select a doctor
+          </Typography>
+          <div className="selectButton">
+            <TextField
+              id="outlined-basic"
+              label="select a doctor"
+              variant="outlined"
+              fullWidth
+            />
+          </div>
+        </div>
+
+        <div className="panel21">
+          <Typography
+            className="typo1"
+            fontFamily="open sans"
+            fontSize={14}
+            fontWeight={700}
+            fontStyle="normal"
+          >
+            Notes
+          </Typography>
+          <div className="selectButton">
+            <TextField
+              id="outlined-basic"
+              label="Write your notes here"
+              variant="outlined"
+              multiline
+              rows={3}
+              fullWidth
+              className="notes"
+            />
+          </div>
+        </div>
+
         {/* <div className="adddanothertherapie">
           <ControlPointOutlinedIcon />
           <Typography
