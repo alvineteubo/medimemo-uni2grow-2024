@@ -49,6 +49,10 @@ const router = createBrowserRouter([
             path: "addEditTherapie",
             element: <AddEditTherapie />,
           },
+          {
+            path: "detailTherapie",
+            element: <DetailTherapie />,
+          },
         ],
       },
     ],

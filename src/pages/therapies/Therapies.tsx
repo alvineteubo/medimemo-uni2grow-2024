@@ -39,6 +39,9 @@ export function Therapies() {
   }
 
   const navigate = useNavigate();
+  const handleForwardClick = (id:number)=> {
+    navigate("/Therapies/detailTherapie", {state:{value:id}})
+  }
 
   const handleclick = () => {
     navigate("addEditTherapie");
@@ -105,8 +108,10 @@ export function Therapies() {
                     type="button"
                     sx={{ p: "10px" }}
                     aria-label="arrowBack"
+                    onClick={()=>handleForwardClick(therapie.id)}
                   >
                     <img src={forwardIcon} alt="arrowBack icon" />
+                    
                   </IconButton>
                 </Paper>
               ))
