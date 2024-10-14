@@ -40,7 +40,7 @@ export function Therapies() {
 
   const navigate = useNavigate();
   const handleForwardClick = (id:number)=> {
-    navigate("/Therapies/detailTherapie", {state:{value:id}})
+    navigate("/Therapies/details", {state:{value:id}})
   }
 
   const handleclick = () => {

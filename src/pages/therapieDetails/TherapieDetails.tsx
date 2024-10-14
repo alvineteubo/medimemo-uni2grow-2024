@@ -1,4 +1,4 @@
-import "./DetailTherapie.css";
+import "./TherapieDetails.css";
 
 import {
   Typography,
@@ -28,8 +28,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Therapie } from "../../models/Therapie.ts";
 import { Therapies } from "../therapies/Therapies.tsx";
 import { IContact } from "../../models/Contact.ts";
-import { AddEditTherapie } from "../addEditTherapie/AddEditTherapie.tsx";
-export function DetailTherapie() {
+import AddEditTherapie from "../addEditTherapie/AddEditTherapie.tsx";
+
+export function TherapieDetails() {
   const [showOption, setShowOptions] = useState<boolean>(false);
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const optionsMenuRef = useRef<HTMLDivElement>(null);
@@ -238,14 +239,15 @@ export function DetailTherapie() {
         <Typography
           className="typo1"
           fontFamily="open sans"
-          fontSize={14}
+          fontSize={16}
           fontWeight={700}
           fontStyle="normal"
         >
           Notes
         </Typography>
         <div>
-          <Box className="notes">{therapies.notes} </Box>
+          <Box className="notes" >
+             {therapies.notes} </Box>
         </div>
       </div>
     </div>
