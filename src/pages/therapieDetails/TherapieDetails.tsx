@@ -28,7 +28,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Therapie } from "../../models/Therapie.ts";
 import { Therapies } from "../therapies/Therapies.tsx";
 import { IContact } from "../../models/Contact.ts";
-import AddEditTherapie from "../addEditTherapie/AddEditTherapie.tsx";
+import {AddEditTherapie} from "../addEditTherapie/AddEditTherapie.tsx";
 
 export function TherapieDetails() {
   const [showOption, setShowOptions] = useState<boolean>(false);

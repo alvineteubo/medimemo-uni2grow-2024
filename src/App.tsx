@@ -8,7 +8,7 @@ import Login from "./pages/login/Login";
 
 import Medications from "./pages/medications/Medications.tsx";
 import MedicationDetails from "./pages/medicationDetails/MedicationDetails.tsx";
-import AddEditTherapie from "./pages/addEditTherapie/AddEditTherapie.tsx";
+import { AddEditTherapie } from "./pages/addEditTherapie/AddEditTherapie.tsx";
 import { TherapieDetails } from "./pages/therapieDetails/TherapieDetails.tsx";
 import Contacts from "./pages/contacts/Contacts.tsx";
 import AddEditContact from "./pages/addEditContact/AddEditContact.tsx";
